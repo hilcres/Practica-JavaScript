@@ -4,10 +4,10 @@ window.onload=inicio;
 
 /* function inicio(){
 
-    document.querySelectorAll(".boton")[0].onclick=accion1;
-    document.querySelectorAll(".boton")[1].onclick=accion2;
-    document.querySelectorAll(".boton")[2].onclick=accion3;
-    document.querySelectorAll(".boton")[3].onclick=accion4;
+    boton[0].onclick=accion1;
+    boton[1].onclick=accion2;
+    boton[2].onclick=accion3;
+    boton[3].onclick=accion4;
 }
 
 function accion1(){
@@ -32,11 +32,75 @@ function accion4(){
     
 function inicio(){
 
-    document.querySelector("body").insertAdjacentHTML("beforeend"`
-    <button id="boton1" class="boton">Boton 1</button>
-    <button id="boton2" class="boton">Boton 2</button>
-    <button id="boton3" class="boton">Boton 3</button>
-    <button id="boton4" class="boton">Boton 4</button>`)
+    var imagen, cajaImagen, boton;
+
+    document.querySelector("body").insertAdjacentHTML("beforeend",`
+    <button  class="boton">Boton 1</button>
+    <button  class="boton">Boton 2</button>
+    <button  class="boton">Boton 3</button>
+    <div id="imagen"><img src="img/ImgHtml.png" alt="imagen de html"></div>`);
+
+    imagen=document.querySelector("img");
+    cajaImagen=document.querySelector("#imagen");
+    boton=document.querySelectorAll(".boton");
+
+    boton[0].onclick=accion1;
+    boton[1].onclick=accion2;
+    boton[2].onclick=accion3;
+    resaltar()
 }
+
+function accion1(){
+
+    imagen.style.backgroundColor="#0040ff";
+    cajaImagen.style.borderRadius="50%";
+    cajaImagen.style.transform="rotate(10deg)";
+    boton[0].style.visibility="hidden";
+
+}
+
+function accion2(){
+
+        if(cajaImagen.style.display=="none"){
+                //ocultar imagen
+           cajaImagen.style.display="block";
+           resaltar()
+
+        }else{
+                //mostrar imagen
+            cajaImagen.style.display="none";
+            boton[1].style.background=null;
+            boton[1].style.borderColor=null;
+
+            }
+        
+}
+function accion3(){
+
+    imagen.style=null; 
+    cajaImagen.style=null;
+    boton[0].style=null;
+    boton[2].style=null;
+    resaltar()
+}
+
+function resaltar(){
+
+    boton[1].style.background="#e44d26";
+    boton[1].style.borderColor="#e44d26";
+
+}
+    
+
+
+     
+   
+
+
+    
+
+
+
+
 
   
