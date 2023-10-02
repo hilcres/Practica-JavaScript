@@ -47,8 +47,8 @@ function inicio(){
     boton[0].onclick=accion1;
     boton[1].onclick=accion2;
     boton[2].onclick=accion3;
-    resaltar()
-}
+    resaltar();
+} 
 
 function accion1(){
 
@@ -64,7 +64,7 @@ function accion2(){
         if(cajaImagen.style.display=="none"){
                 //ocultar imagen
            cajaImagen.style.display="block";
-           resaltar()
+           resaltar();
 
         }else{
                 //mostrar imagen
@@ -81,7 +81,7 @@ function accion3(){
     cajaImagen.style=null;
     boton[0].style=null;
     boton[2].style=null;
-    resaltar()
+    resaltar();
 }
 
 function resaltar(){
