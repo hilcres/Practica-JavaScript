@@ -1,6 +1,8 @@
 window.onload=inicio;
 
-function inicio(){
+//codigo javascripts del ejercicio numero 01
+
+/* function inicio(){
 
     document.querySelectorAll(".boton")[0].onclick=accion1;
     document.querySelectorAll(".boton")[1].onclick=accion2;
@@ -26,7 +28,15 @@ function accion3(){
 function accion4(){
     
     document.querySelector(".caja").innerHTML="";
-}
+} */
     
+function inicio(){
+
+    document.querySelector("body").insertAdjacentHTML("beforeend"`
+    <button id="boton1" class="boton">Boton 1</button>
+    <button id="boton2" class="boton">Boton 2</button>
+    <button id="boton3" class="boton">Boton 3</button>
+    <button id="boton4" class="boton">Boton 4</button>`)
+}
 
   
